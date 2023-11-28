@@ -1,0 +1,25 @@
+{
+    "if": {
+        "anyof": [
+            {
+              "field": "tags.Environment",
+              "exists": false
+            },
+            {
+              "field": "location",
+              "equals": "francecentral"
+            },
+            {
+              "field": "location",
+              "equals": "France Central"
+            },
+            {
+              "field": "location",
+              "equals": "Global"
+            }
+        ]
+    },
+    "then": {
+      "effect": "Deny"
+    }
+}
